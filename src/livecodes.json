@@ -1,0 +1,38 @@
+{
+  "title": "RacingBars",
+  "description": "",
+  "head": "<meta charset=\"UTF-8\" />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />",
+  "htmlAttrs": "lang=\"en\" class=\"\"",
+  "tags": [],
+  "activeEditor": "script",
+  "markup": {
+    "language": "html",
+    "content": ""
+  },
+  "style": {
+    "language": "css",
+    "content": ".race {\n  height: 80vh;\n}\n"
+  },
+  "script": {
+    "language": "jsx",
+    "content": "import RacingBars from \"racing-bars/react\";\n\nexport default function App() {\n  /** @type {import('racing-bars').Options} */\n  const options = {\n    dataUrl: \"https://racing-bars.hatemhosny.dev/data/population.csv\",\n    dataTransform: (data) =>\n      data.map((d) => ({\n        ...d,\n        icon: `https://flagsapi.com/${d.code}/flat/64.png`,\n      })),\n    title: \"World Population in 60 Years\",\n    subTitle: \"Country Population in millions\",\n    caption: \"Source: World Bank\",\n    showIcons: true,\n    labelsPosition: \"inside\",\n  };\n\n  return <RacingBars className=\"race\" {...options}>Loading...</RacingBars>;\n}\n"
+  },
+  "stylesheets": [],
+  "scripts": [],
+  "cssPreset": "",
+  "processors": [],
+  "customSettings": {},
+  "imports": {
+    "racing-bars": "https://racing-bars.hatemhosny.dev/lib/racing-bars.js",
+    "racing-bars/react": "https://racing-bars.hatemhosny.dev/lib/react.js",
+    "racing-bars/vue": "https://racing-bars.hatemhosny.dev/lib/vue.js"
+  },
+  "types": {
+    "racing-bars": "https://racing-bars.hatemhosny.dev/lib/racing-bars.d.ts"
+  },
+  "tests": {
+    "language": "typescript",
+    "content": ""
+  },
+  "version": "42"
+}
